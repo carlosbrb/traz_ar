@@ -11,4 +11,15 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.before(:all) do |c|
+    TrazAr.configure do |config|
+      config.wsse_user = 'testwservice'
+      config.wsse_password = 'testwservicepsw'
+      config.service_url = 'https://servicios.pami.org.ar/trazamed.WebService'
+      config.service_wsdl = 'https://servicios.pami.org.ar/trazamed.WebService?wsdl'
+      config.service_user = 'glnws'
+      config.service_password = 'glnws'
+    end
+  end
 end

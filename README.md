@@ -20,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+You must configure the service parameters, ie for test service:
+
+```ruby
+TrazAr.configure do |config|
+  config.wsse_user = 'testwservice'
+  config.wsse_password = 'testwservicepsw'
+  config.service_url = 'https://servicios.pami.org.ar/trazamed.WebService'
+  config.service_wsdl = 'https://servicios.pami.org.ar/trazamed.WebService?wsdl'
+  config.service_user = 'glnws'
+  config.service_password = 'glnws'
+end
+```
 
 ## Development
 
