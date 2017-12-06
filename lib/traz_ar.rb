@@ -5,8 +5,7 @@ require 'traz_ar/client'
 # Main module
 module TrazAr
   class << self
-    attr_accessor :configuration
-    # @client = TrazAr::Client.new
+    attr_writer :configuration
   end
 
   def self.configuration
@@ -19,9 +18,5 @@ module TrazAr
 
   def self.configure
     yield(configuration)
-  end
-
-  def actions
-    @client.actions
   end
 end
