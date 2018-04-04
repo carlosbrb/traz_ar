@@ -19,6 +19,10 @@ module TrazAr
       call_action(:get_transacciones_no_confirmadas)[:cant_paginas]
     end
 
+    def all_unconfirmed_transactions(args = {})
+      call_action(:get_transacciones_no_confirmadas, args)
+    end
+
     def call_action(action_name, args = {})
       response_key = action_name.to_s + '_response'
       response = @client.call(
