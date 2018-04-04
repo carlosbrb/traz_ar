@@ -8,12 +8,12 @@ module TrazAr
                   :service_password
 
     def initialize
-      @wsse_user = nil
-      @wsse_password = nil
-      @service_url = nil
-      @service_wsdl = nil
-      @service_user = nil
-      @service_password = nil
+      @wsse_user = 'testwservice'
+      @wsse_password = 'testwservicepsw'
+      @service_url = 'https://servicios.pami.org.ar/trazamed.WebService'
+      @service_wsdl = 'https://servicios.pami.org.ar/trazamed.WebService?wsdl'
+      @service_user = 'glnws'
+      @service_password = 'glnws'
     end
   end
 end

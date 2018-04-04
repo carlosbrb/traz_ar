@@ -1,9 +1,11 @@
-require "traz_ar/version"
-require "traz_ar/configuration"
-
+require 'savon'
+require 'traz_ar/version'
+require 'traz_ar/configuration'
+require 'traz_ar/client'
+# Main module
 module TrazAr
   class << self
-    attr_accessor :configuration
+    attr_writer :configuration
   end
 
   def self.configuration
